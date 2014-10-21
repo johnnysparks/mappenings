@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MAPRootViewController.h
 //  mappenings
 //
 //  Created by Johnny Sparks on 10/20/14.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class MAPFeedZillaAPI;
+
+@interface MAPRootViewController : UIViewController
 
 
 @end
