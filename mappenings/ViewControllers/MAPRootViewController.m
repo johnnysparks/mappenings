@@ -49,6 +49,8 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+
+    [MAPUtil toast:@"Loading Sections..."];
     [self.api categories:^(NSArray *categories, NSError *error) {
         if(error) [MAPUtil toast:error.localizedDescription];
         self.tableView.categories = categories;

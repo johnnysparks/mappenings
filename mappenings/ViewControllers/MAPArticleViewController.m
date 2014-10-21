@@ -9,6 +9,8 @@
 #import "MAPUtil.h"
 #import "MAPArticlesTableView.h"
 #import "UIViewController+MAPgoto.h"
+#import "MAPArticle.h"
+#import "SVWebViewController.h"
 
 
 @interface MAPArticleViewController ()
@@ -31,31 +33,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"Unknown";
+    self.title = @"Loading...";
 
     NSDictionary *views = @{ @"table" : self.tableView };
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[table]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[table]|" options:0 metrics:nil views:views]];
 
+    [MAPUtil toast:@"Loading ..."];
     self.api = [MAPFeedZillaAPI defaultAPI];
     [self.api articlesForCategory:[MAPUtil uintify:self.category.identifier]
                       subcategory:[MAPUtil uintify:self.subcategory.identifier]
                              done:^(NSArray *articles, NSDictionary *meta, NSError *error) {
 
-        if (error){
-            [MAPUtil toast:error.localizedDescription];
-            return;
-        }
+                                 if (error) {
+                                     [MAPUtil toast:error.localizedDescription];
+                                     return;
+                                 }
+                                 if (meta[@"description"]) {
+                                     self.title = meta[@"description"];
+                                 }
 
-        if(meta[@"description"]){
-            self.title = meta[@"description"];
-        }
-
-        self.tableView.articles = articles;
-    }];
+                                 self.tableView.articles = articles;
+                             }];
 
     [self.tableView setOnTapArticle:^(id <MAPArticle> article) {
-        NSLog(@"%@", article);
+        SVWebViewController *vc = [[SVWebViewController alloc] initWithAddress:article.source.absoluteString];
+        [self goto:vc];
     }];
 }
 

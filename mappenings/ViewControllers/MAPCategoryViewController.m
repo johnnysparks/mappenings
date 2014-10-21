@@ -37,16 +37,21 @@
 
     self.api = [MAPFeedZillaAPI defaultAPI];
 
-    [self.api subcategoriesForCategory:[MAPUtil uintify:self.category.identifier] done:^(NSArray *categories, NSError *error) {
-        self.tableView.categories = categories;
-    }];
-
     [self.tableView setOnTapCategory:^(id <MAPCategory> category) {
         MAPArticleViewController *vc = [MAPArticleViewController new];
         [vc setCategory:self.category andSubcategory:category];
         [self goto:vc];
     }];
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [MAPUtil toast:@"Loading Sections..."];
+    [self.api subcategoriesForCategory:[MAPUtil uintify:self.category.identifier] done:^(NSArray *categories, NSError *error) {
+        self.tableView.categories = categories;
+    }];
+}
+
 
 - (void)setCategory:(id <MAPCategory>)category {
     _category = category;

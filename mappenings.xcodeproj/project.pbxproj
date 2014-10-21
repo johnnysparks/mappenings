@@ -22,6 +22,7 @@
 		BB2EDAA27916704210210682 /* MAPFeedZillaCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2ED382634A445AB7228BD8 /* MAPFeedZillaCategory.m */; };
 		BB2EDC13386A40BAB52EF7E0 /* MAPRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2EDE4C69D87BAB24E6A993 /* MAPRootViewController.m */; };
 		BB2EDD5E6EF34B7731B3DD77 /* MAPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2EDE9ADB6679EA5E266909 /* MAPNavigationController.m */; };
+		BB2EDDD1E24030ED225180E5 /* MAPArticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2EDAAF755E1AD4F7F6B928 /* MAPArticleView.m */; };
 		BB2EDF38DC491BC636C42ED4 /* MAPFeedZillaAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2ED9EAD520AD4B24C09005 /* MAPFeedZillaAPI.m */; };
 /* End PBXBuildFile section */
 
@@ -63,9 +64,11 @@
 		BB2ED9B603AD49225D61EF3E /* MAPArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPArticleViewController.m; sourceTree = "<group>"; };
 		BB2ED9EAD520AD4B24C09005 /* MAPFeedZillaAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPFeedZillaAPI.m; sourceTree = "<group>"; };
 		BB2ED9EE37B7C26DA7648085 /* UIViewController+MAPgoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MAPgoto.h"; sourceTree = "<group>"; };
+		BB2EDAAF755E1AD4F7F6B928 /* MAPArticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPArticleView.m; sourceTree = "<group>"; };
 		BB2EDBA326B0CD41D6F843EA /* MAPCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPCategoryViewController.m; sourceTree = "<group>"; };
 		BB2EDBD6BAC70A424EE49ECB /* MAPCategoriesTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPCategoriesTableView.m; sourceTree = "<group>"; };
 		BB2EDC839103F5A8035F128D /* MAPFeedZillaAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPFeedZillaAPI.h; sourceTree = "<group>"; };
+		BB2EDD3ECF59A24D517026C6 /* MAPArticleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPArticleView.h; sourceTree = "<group>"; };
 		BB2EDD54666CED0B0B203BC3 /* UIViewController+MAPgoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MAPgoto.m"; sourceTree = "<group>"; };
 		BB2EDE4C69D87BAB24E6A993 /* MAPRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPRootViewController.m; sourceTree = "<group>"; };
 		BB2EDE9188C66A56EB61E1BE /* MAPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPCategory.h; sourceTree = "<group>"; };
@@ -226,6 +229,8 @@
 				BB2EDBD6BAC70A424EE49ECB /* MAPCategoriesTableView.m */,
 				BB2ED07CF0BD05C61E87915C /* MAPArticlesTableView.m */,
 				BB2ED8BD8F33F2CBFBAB12FC /* MAPArticlesTableView.h */,
+				BB2EDAAF755E1AD4F7F6B928 /* MAPArticleView.m */,
+				BB2EDD3ECF59A24D517026C6 /* MAPArticleView.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 				BB2ED223C1C3F99DB91349B1 /* MAPArticleViewController.m in Sources */,
 				BB2ED5C536C8BCF4E6B12E9B /* MAPArticlesTableView.m in Sources */,
 				BB2ED61CDFF02AB7A86C4E45 /* UIViewController+MAPgoto.m in Sources */,
+				BB2EDDD1E24030ED225180E5 /* MAPArticleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

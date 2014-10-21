@@ -21,16 +21,19 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - CRToast (0.0.7)
+  - SVWebViewController (HEAD based on 1.0)
   - Underscore.m (0.2.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - CRToast (~> 0.0)
+  - SVWebViewController (HEAD)
   - Underscore.m (~> 0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   CRToast: f9f2c4b29776d68ba24c4d621cba59a83fea921b
+  SVWebViewController: fbf917baa92744c54cfb89a52a4c056e409973a4
   Underscore.m: f99c166a9fdccfb5069085b6b4263c04b817fc9f
 
 COCOAPODS: 0.34.4
