@@ -4,8 +4,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MAPRootViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface MAPRootViewController (gotoViewController)
-- (void) goto:(UIViewController *)viewController;
+@interface UIViewController (MAPgoto)
+
+- (void)goto:(UIViewController *)viewController;
+
 @end

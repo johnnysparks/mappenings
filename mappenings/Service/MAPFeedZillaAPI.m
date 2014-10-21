@@ -63,9 +63,9 @@
     NSString *path = [NSString stringWithFormat:@"v1/categories/%d/articles.json", categoryID];
 
     [self.manager GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        handler([MAPFeedZillaArticle articlesFromDicts:responseObject[@"articles"]], nil);
+        handler([MAPFeedZillaArticle articlesFromDicts:responseObject[@"articles"]], responseObject, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        handler(nil, error);
+        handler(nil, nil, error);
     }];
 }
 
@@ -76,9 +76,9 @@
     NSString *path = [NSString stringWithFormat:@"v1/categories/%d/subcategories/%d/articles.json", categoryId, subcategoryId];
 
     [self.manager GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        handler([MAPFeedZillaArticle articlesFromDicts:responseObject[@"articles"]], nil);
+        handler([MAPFeedZillaArticle articlesFromDicts:responseObject[@"articles"]], responseObject, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        handler(nil, error);
+        handler(nil, nil, error);
     }];
 }
 
@@ -91,9 +91,9 @@
     };
 
     [self.manager GET:path parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
-        handler([MAPFeedZillaArticle articlesFromDicts:responseObject[@"articles"]], nil);
+        handler([MAPFeedZillaArticle articlesFromDicts:responseObject[@"articles"]], responseObject, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        handler(nil, error);
+        handler(nil, nil, error);
     }];
 }
 

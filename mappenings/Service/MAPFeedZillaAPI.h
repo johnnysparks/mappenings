@@ -8,7 +8,7 @@
 @class AFHTTPSessionManager;
 
 typedef void (^MAPCategoriesHandler)(NSArray *categories, NSError *error);
-typedef void (^MAPArticlesHandler)(NSArray *articles, NSError *error);
+typedef void (^MAPArticlesHandler)(NSArray *articles, NSDictionary *meta, NSError *error);
 
 @interface MAPFeedZillaAPI : NSObject
 

@@ -3,10 +3,11 @@
 // Copyright (c) 2014 beergrammer. All rights reserved.
 //
 
-#import "MAPRootViewController+gotoViewController.h"
+#import "UIViewController+MAPgoto.h"
+#import <UIKit/UIKit.h>
 
+@implementation UIViewController (MAPgoto)
 
-@implementation MAPRootViewController (gotoViewController)
 - (void)goto:(UIViewController *)viewController {
     if(self.navigationController){
         [self.navigationController pushViewController:viewController animated:YES];

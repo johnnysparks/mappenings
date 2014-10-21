@@ -12,7 +12,7 @@
 #import "MAPUtil.h"
 #import "MAPFeedZillaCategory.h"
 #import "MAPCategoryViewController.h"
-#import "MAPRootViewController+gotoViewController.h"
+#import "UIViewController+MAPgoto.h"
 
 @interface MAPRootViewController ()
 @property(nonatomic, strong) MAPCategoriesTableView *tableView;

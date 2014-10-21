@@ -8,6 +8,8 @@
 #import "MAPCategoriesTableView.h"
 #import "MAPFeedZillaAPI.h"
 #import "MAPUtil.h"
+#import "MAPArticleViewController.h"
+#import "UIViewController+MAPgoto.h"
 
 
 @interface MAPCategoryViewController ()
@@ -40,7 +42,9 @@
     }];
 
     [self.tableView setOnTapCategory:^(id <MAPCategory> category) {
-        NSLog(@"%@", category);
+        MAPArticleViewController *vc = [MAPArticleViewController new];
+        [vc setCategory:self.category andSubcategory:category];
+        [self goto:vc];
     }];
 }
 

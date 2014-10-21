@@ -12,6 +12,7 @@
 @end
 
 @implementation MAPFeedZillaArticle
+
 - (NSString *)description {
     NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];
     [description appendFormat:@"self.sourceSite=%@", self.sourceSite];
@@ -37,7 +38,7 @@
     article.sourceSite = dict[@"source"];
     article.originalData = dict;
 
-    return nil;
+    return article;
 }
 
 + (NSArray *)articlesFromDicts:(NSArray *)dicts {
